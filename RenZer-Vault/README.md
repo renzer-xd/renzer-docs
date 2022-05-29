@@ -160,9 +160,9 @@ end
 
  src = PlayerId
  
- type = ประเภทของค่าที่ส่งมา item,account,weapon
+ type = ประเภทของค่าที่ส่งมา item|account|weapon
  
- item = ชื่อไอเท็มที่จะส่งไปบันทึกข้อมูล หากเลือกtype เป็น account item จะใช้ได้แค่ black_money อย่างเดียว
+ item = ชื่อไอเท็มที่จะส่งไปบันทึกข้อมูล หากเลือก type เป็น account ค่า item จะใช้ได้แค่ black_money อย่างเดียว
  
  count = จำนวน
  
