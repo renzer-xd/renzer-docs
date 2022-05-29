@@ -150,3 +150,22 @@ end
 
 [nc_discordlogs](https://github.com/renzer-xd/renzer-docs/blob/main/RenZer-Vault/Log-%20Discord/nc_discordlogs.md)
 
+# การใช้งาน Exports
+สำหรับบางเซิฟเวอร์ที่ต้องการส่งค่าไอเท็มจากสคริปอื่นเพื่อมาเก็บในตู้เซฟ ใช้ได้แค่ฝั่ง Server เท่านั้น
+
+```lua
+ local src = source
+ exports.renzer_Vault:PutVault(src,type,item,count,vault,groupvault)
+```
+
+ src = PlayerId
+ type = ประเภทของค่าที่ส่งมา item,account,weapon
+ item = ชื่อไอเท็มที่จะส่งไปบันทึกข้อมูล หากเลือกtype เป็น account item จะใช้ได้แค่ black_money อย่างเดียว
+ count = จำนวน
+ vault = ชื่อของฐานข้อมูลตู้เซฟ ชื่อต้องตรงกับ SqlName
+ groupvault = หากตู้เซฟที่ส่งไปบันทึกข้อมูลเป็นตู้เซฟแบบรวมให้ปรับเป็น true หากเป็นตู้เซฟส่วนตัวให้ปรับเป็น false
+ 
+
+
+
+
