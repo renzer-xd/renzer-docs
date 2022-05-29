@@ -145,6 +145,8 @@ end
 ```
 # การติดตั้ง Logs เอาของเข้า/ออกเซฟ
 ในส่วนนี้เราจะขอแสดงตัวอย่าง
+
 [azael_dc-serverlogs](https://github.com/renzer-xd/renzer-docs/blob/main/RenZer-Vault/Log-%20Discord/azael_dc-serverlogs.md)
+
 [nc_discordlogs](https://github.com/renzer-xd/renzer-docs/blob/main/RenZer-Vault/Log-%20Discord/nc_discordlogs.md)
 
