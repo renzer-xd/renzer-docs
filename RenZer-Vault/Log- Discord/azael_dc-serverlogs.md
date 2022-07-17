@@ -51,7 +51,7 @@ if item.type == 'item' then
 > ## เอาของออกจากตู้เซฟ
 1. ให้ไปที่ `renzer_Vault\config` จากนั้นเปิดไฟล์ `config.function.lua`
 2. มองหา Function `RZ.ServerTakeItemVault` นำโค้ดต่อไปนี้ ไปวางใน Function
-```css
+```lua
 if item.type == 'item' then
         local sendToDiscord = '' .. xPlayer.name .. ' นำ ' .. ESX.GetItemLabel(item.name) .. ' จำนวน ' .. ESX.Math.GroupDigits(item.number) .. ' ชิ้น  ออกจากตู้นิรภัย'
         if vault == 'vault' then
