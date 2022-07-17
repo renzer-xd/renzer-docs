@@ -30,23 +30,18 @@
 
 # การตั้งค่าทรัพยากร
 ในส่วนนี้เราจะขออธิบายเฉพาะแค่หัวขอสำคัญเท่านั้นส่วนหัวข้ออื่นๆจะเขียนลงไว้ในไฟล์Configอยู่แล้ว
-> ### RZ.UseDataBase 
-
-ในส่วนนี้ ลูกค้าสามารถเลือกประเภทของการใช้งานฐานข้อมูลได้ดังนี้ `MySql,OxMysql,MongoDB` 
-หากในกรณีที่ลูกค้าต้องการเก็บข้อมูลด้วย MongoDB สคริป MongoDB ของท่างต้องมี Library Sync Async
-หรือสามารถโหลดได้จาก [fivem-mongodb](https://github.com/renzer-xd/fivem-mongodb)
 
 > ### RZ.CheckDoubleAmmo
 
 ในส่วนนี้บางกระเป๋าจะเจอปัญหาที่ดึงอาวุธออกจากตู้แล้วจะมีอาการกระสุณได้คูณ2ซึ่งในส่วนนี้จะเกิดจากตัวกระเป๋าเอง บางกระเป๋าที่แก้แล้วจะไม่เจออาการนี้หรือใครที่ใช้กระเป๋าของNcจะไม่เจออาการนี้ หากลูกค้าคนไหนเจออาการนี้ให้ปรับ `RZ.CheckDoubleAmmo = true`
 
 > ### RZ.Vault
-ในส่วนนี้ลูกค้าสามารถเพิ่มตู้เซฟได้ไม่จำกัดแต่ SqlName  ต้องตรงกับ name ของ `RZ.SetDataBase`
+ในส่วนนี้ลูกค้าสามารถเพิ่มตู้เซฟได้ไม่จำกัดแต่ VaultDataBase  ต้องตรงกับ name ของ `RZ.SetDataBase`
 
 > ### CheckJob
-ในส่วนFunction นี้จะเป็นกำหนดให้ตู้เซฟเปิดได้แค่เฉพาะJobที่ตั้งไว้ โดยจะอิงจาก Key ของ `RZ.Vault`
+ในส่วนFunction นี้จะต้องการให้เช็คหน่วยงานไหมถ้าไม่ต้องการให้ลบในส่วนนี้ออก`
 
-> ### GroupVault
+> ### SaredVault
 ในส่วนนี้ จะเป็นการกำหนดรูปแบบของตู้เซฟหากต้องการให้เป็นตู้รวมให้ปรับเป็น true หากต้องการให้เป็นตู้เซฟส่วนตัวให้ปรับเป็น false
 
 # การติดตั้ง ส่วนเสริมในกระเป๋า
@@ -88,7 +83,7 @@ client_scripts {
 7. จากนั้นมองหา function `closeInventory()` 
 8. จากนั้นทำการวาง โค้ด  
 ```
-TriggerEvent('renzer_vault:cl:CloseInventory')
+TriggerEvent('renzer_Vault:cl:CloseInventory')
 ```
 ไว้ข้างล่างโค้ด `SetNuiFocus(false, false)` ดังตัวอย่าง
 ```lua
@@ -100,7 +95,7 @@ function closeInventory()
         }
     )
     SetNuiFocus(false, false)
-    TriggerEvent('renzer_vault:cl:CloseInventory')  -- RenZer Vault
+    TriggerEvent('renzer_Vault:cl:CloseInventory')  -- RenZer Vault
     TriggerEvent('meeta_carinventory:setOpenMenu', false)
 end
 ```
